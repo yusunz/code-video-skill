@@ -1,0 +1,8 @@
+# 依赖与构建产物：不进版本库，可由 npm 与渲染命令复原
+node_modules/
+out/
+build/
+
+# 系统杂项文件
+.DS_Store
+Thumbs.db

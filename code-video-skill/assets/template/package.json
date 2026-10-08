@@ -1,0 +1,44 @@
+{
+  "name": "autovideo-template",
+  "version": "0.1.0",
+  "private": true,
+  "description": "code-video-skill 视频工程模板：Remotion + three.js + p5.js + Tone.js 的配置基线、适配层与音效工具链",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@react-three/fiber": "9.8.1",
+    "@remotion/cli": "4.0.532",
+    "@remotion/media": "4.0.532",
+    "@remotion/three": "4.0.532",
+    "p5": "2.3.4",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "4.0.532",
+    "roughjs": "4.6.6",
+    "three": "0.186.1",
+    "tone": "15.1.22"
+  },
+  "devDependencies": {
+    "@remotion/eslint-config-flat": "4.0.532",
+    "@types/react": "19.2.7",
+    "@types/web": "0.0.166",
+    "esbuild": "0.28.1",
+    "eslint": "9.39.5",
+    "prettier": "3.8.1",
+    "typescript": "5.9.3"
+  },
+  "scripts": {
+    "dev": "remotion studio",
+    "build": "remotion bundle",
+    "lint": "eslint src && tsc",
+    "upgrade": "remotion upgrade",
+    "sfx:bundle": "node scripts/bundle-sfx.mjs",
+    "sfx:generate": "node scripts/generate-sfx.mjs",
+    "sfx": "npm run sfx:bundle && npm run sfx:generate",
+    "bed": "npm run sfx:bundle && node scripts/generate-bed.mjs",
+    "still:p5": "remotion still SegP5 out/stills/p5.png --frame=75",
+    "still:three": "remotion still SegThree out/stills/three.png --frame=75",
+    "still:cover": "remotion still Main out/cover.png --frame=240",
+    "render:raw": "remotion render Main out/full-remotion-raw.mp4",
+    "render:full": "remotion render Main out/full-remotion-raw.mp4 && node scripts/finalize-mp4.mjs"
+  }
+}
