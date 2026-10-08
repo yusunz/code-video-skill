@@ -16,13 +16,23 @@
 
 ## 安装
 
-只需要一步：**把本仓库内的 `code-video-skill/` 整个放入你的 AI 工具的 skill 读取目录**，即可被自动识别。
+**方式一：一行命令（推荐）**
+
+```powershell
+npx skills add yusunz/code-video-skill
+```
+
+[skills CLI](https://skills.sh) 会从本仓库自动发现并安装 skill（前提：本机有 git 与 Node）。重复执行同一条命令即可更新到最新版。
+
+**方式二：手动复制**
+
+把本仓库内的 `code-video-skill/` 整个放入你的 AI 工具的 skill 读取目录：
 
 - Codex：`~/.agents/skills/`
 - Claude Code：`~/.claude/skills/`
 - 其它工具：放入其文档约定的 skills 目录
 
-skill 内全部使用相对路径，放在哪里都能运行，无需其它安装步骤。
+两种方式等价；skill 内全部使用相对路径，放在哪里都能运行，无需其它安装步骤。
 
 ## 依赖
 
